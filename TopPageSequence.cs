@@ -22,7 +22,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
                 if (objUserLog != null)
                 {
-                    objUserLog.sites.Add(Sites[i]);
+                    objUserLog.sites.Add(Sites[i]); 
                 }
                 else
                 {
