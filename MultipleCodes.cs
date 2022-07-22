@@ -6,13 +6,24 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+
+            //TopPageSquenceCode();
+
+            TwoSumCode();
+
+
+        }
+
+        
+        public static void TopPageSquenceCode()
+        {
             byte[] Tran = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             string[] UserName = new string[] { "joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary" };
             string[] Sites = new string[] { "home", "about", "career", "home", "carts", "maps", "home", "home", "about", "career" };
 
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
-            
+
             UserLog? objUserLog;
             List<UserLog> lstUserLog = new List<UserLog>();
 
@@ -22,7 +33,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
                 if (objUserLog != null)
                 {
-                    objUserLog.sites.Add(Sites[i]); 
+                    objUserLog.sites.Add(Sites[i]);
                 }
                 else
                 {
@@ -54,8 +65,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
             }
 
-            Console.WriteLine("Maximum Visited Sites Sequence:" +  SiteVisits.Aggregate((x, y) => x.Value > y.Value ? x : y).Key);
-
+            Console.WriteLine("Maximum Visited Sites Sequence:" + SiteVisits.Aggregate((x, y) => x.Value > y.Value ? x : y).Key);
             watch.Stop();
 
             Console.WriteLine("TimeTaken to execute the code: " + watch.ElapsedMilliseconds);
@@ -66,9 +76,14 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
             }
         }
 
+        public static void TwoSumCode()
+        {
+                
 
+        }
 
     }
+
 
     public class UserLog
     {
@@ -80,7 +95,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
             this.sites = new List<string>();
             this.username = username;
             this.sites.Add(site);
-            
+
         }
     }
 }
