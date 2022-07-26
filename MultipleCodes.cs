@@ -9,12 +9,16 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
             //TopPageSquenceCode();
 
-            TwoSumCode();
+            // Console.WriteLine("Indexing Summing to 4 in { 1, 1, 2, 1, 1, 2 } are:  {");
+            // foreach (int i in TwoSumCode(new int[] { 1, 1, 2, 1, 1, 2 }, 4))
+            //     Console.Write(i + " ");
+
+            MissingNumber(new int[] { 5, 4, 2, 1, 9, 6, 3, 7 });
 
 
         }
 
-        
+
         public static void TopPageSquenceCode()
         {
             byte[] Tran = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -76,10 +80,45 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
             }
         }
 
-        public static void TwoSumCode()
+        public static int[] TwoSumCode(int[] nums, int target)
         {
-                
+            int arrayLength = nums.Length;
 
+            Dictionary<int, int> result = new();
+
+            if (nums == null || arrayLength < 2)
+                return Array.Empty<int>();
+
+
+            for (int i = 0; i < arrayLength; i++)
+            {
+                int first_number = nums[i];
+                int second_number = target - first_number;
+
+                if (result.TryGetValue(second_number, out int index))
+                {
+                    return new[] { index, i };
+                }
+
+                result[first_number] = i;
+            }
+            return new int[] { 0 };
+        }
+
+        public static void MissingNumber(int[] nums)
+        {
+            int actual_sum = 0;
+            int sum = nums.Sum();
+            int n=nums.Length+1;
+            Console.WriteLine("Array for finding the Missing Number: ");
+            for (int i = 1; i <= n; i++)
+            {
+                actual_sum += i;
+                //Console.WriteLine(" " + nums[i-1]);
+            }
+            //Alternatively:
+            int alternate_actual_sum=(n*(n+1))/2 - sum;
+            Console.WriteLine("The Missing number is " + (actual_sum - sum) + " ------------  Alternative Solution: " + alternate_actual_sum);
         }
 
     }
