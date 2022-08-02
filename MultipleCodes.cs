@@ -7,13 +7,19 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            //TopPageSquenceCode();
+            /*TopPageSquenceCode();
 
-            // Console.WriteLine("Indexing Summing to 4 in { 1, 1, 2, 1, 1, 2 } are:  {");
-            // foreach (int i in TwoSumCode(new int[] { 1, 1, 2, 1, 1, 2 }, 4))
-            //     Console.Write(i + " ");
+            Console.WriteLine("Indexing Summing to 4 in { 1, 1, 2, 1, 1, 2 } are:  {");
+            foreach (int i in TwoSumCode(new int[] { 1, 1, 2, 1, 1, 2 }, 4))
+                Console.Write(i + " ");
 
-            MissingNumber(new int[] { 5, 4, 2, 1, 9, 6, 3, 7 });
+            MissingNumber(new int[] { 5, 4, 2, 1, 9, 6, 3, 7 });*/
+
+            //Amazon telephonic interview Question
+            Console.WriteLine("Shuffled Playlist for Playlist:  {1,2,3,4,5,6,7,8,9} using :");
+            ShufflePlayList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 3);
+
+
 
 
         }
@@ -109,7 +115,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
         {
             int actual_sum = 0;
             int sum = nums.Sum();
-            int n=nums.Length+1;
+            int n = nums.Length + 1;
             Console.WriteLine("Array for finding the Missing Number: ");
             for (int i = 1; i <= n; i++)
             {
@@ -117,8 +123,67 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
                 //Console.WriteLine(" " + nums[i-1]);
             }
             //Alternatively:
-            int alternate_actual_sum=(n*(n+1))/2 - sum;
+            int alternate_actual_sum = (n * (n + 1)) / 2 - sum;
             Console.WriteLine("The Missing number is " + (actual_sum - sum) + " ------------  Alternative Solution: " + alternate_actual_sum);
+        }
+
+        public static void ShufflePlayList(int[] songs, int playbackLimit)
+        {
+            int n = songs.Length;
+
+            HashSet<int> Shuffled = new HashSet<int>();
+
+            Dictionary<int, int> DictShuffled = new Dictionary<int, int>();
+
+
+            Random rand = new Random();
+
+            while (Shuffled.Count != n)
+            {
+                int Random_index = rand.Next(0, n);
+
+                if (!Shuffled.TryGetValue(songs[Random_index], out int index))
+                    Shuffled.Add(songs[Random_index]);
+
+            }
+            
+            for (int i = 0; DictShuffled.Values.Distinct().ToList().Count != n; i++)
+            {
+                int Random_index = rand.Next(0, n);
+
+                if (i == 0)
+                    DictShuffled.Add(i, songs[Random_index]);
+                else
+                {
+                    bool isDuplicate = false;
+                    for (int k = DictShuffled.Count-1, j = 0; j < playbackLimit && k >= 0; j++, k--)
+                    {
+                        if (DictShuffled.ElementAt(k).Value==songs[Random_index])
+                        {
+                            isDuplicate = true;
+                            break;
+                        }
+                    }
+                    if (!isDuplicate)
+                        DictShuffled.Add(i, songs[Random_index]);
+                }
+            }
+
+            Console.Write("\nHashset (no duplicate songs) : { ");
+            foreach (int s in Shuffled)
+            {
+                Console.Write(s + " ");
+            }
+            Console.Write(" }");
+
+            Console.Write("\nDictionary (with duplicate songs) playbackLimit:" + playbackLimit + " : { ");
+
+            foreach (KeyValuePair<int, int> a in DictShuffled)
+            {
+                Console.Write(a.Value + " ");
+            }
+            Console.Write(" }");
+
         }
 
     }
