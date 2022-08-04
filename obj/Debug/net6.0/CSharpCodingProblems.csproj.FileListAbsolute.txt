@@ -1,0 +1,15 @@
+D:\Important\Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.exe
+D:\Important\Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.deps.json
+D:\Important\Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.runtimeconfig.json
+D:\Important\Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.dll
+D:\Important\Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.pdb
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.csproj.AssemblyReference.cache
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.GeneratedMSBuildEditorConfig.editorconfig
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.AssemblyInfoInputs.cache
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.AssemblyInfo.cs
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.csproj.CoreCompileInputs.cache
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.dll
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\refint\CSharpCodingProblems.dll
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.pdb
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.genruntimeconfig.cache
+D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\ref\CSharpCodingProblems.dll

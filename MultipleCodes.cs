@@ -13,12 +13,13 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
             foreach (int i in TwoSumCode(new int[] { 1, 1, 2, 1, 1, 2 }, 4))
                 Console.Write(i + " ");
 
-            MissingNumber(new int[] { 5, 4, 2, 1, 9, 6, 3, 7 });*/
+            MissingNumber(new int[] { 5, 4, 2, 1, 9, 6, 3, 7 });
 
             //Amazon telephonic interview Question
             Console.WriteLine("Shuffled Playlist for Playlist:  {1,2,3,4,5,6,7,8,9} using :");
-            ShufflePlayList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 3);
+            ShufflePlayList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 3);*/
 
+            DictionaryCountEinGivenRange();
 
 
 
@@ -146,7 +147,7 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
                     Shuffled.Add(songs[Random_index]);
 
             }
-            
+
             for (int i = 0; DictShuffled.Values.Distinct().ToList().Count != n; i++)
             {
                 int Random_index = rand.Next(0, n);
@@ -156,9 +157,9 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
                 else
                 {
                     bool isDuplicate = false;
-                    for (int k = DictShuffled.Count-1, j = 0; j < playbackLimit && k >= 0; j++, k--)
+                    for (int k = DictShuffled.Count - 1, j = 0; j < playbackLimit && k >= 0; j++, k--)
                     {
-                        if (DictShuffled.ElementAt(k).Value==songs[Random_index])
+                        if (DictShuffled.ElementAt(k).Value == songs[Random_index])
                         {
                             isDuplicate = true;
                             break;
@@ -186,9 +187,95 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
         }
 
+        public static void DictionaryCountEinGivenRange()
+        {
+            int lower = 1, upper = 10;//default
+            string Number = string.Empty;
+            try
+            {
+                Console.WriteLine("Enter Lower Limit: ");
+                lower = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Upper Limit: ");
+                upper = Convert.ToInt32(Console.ReadLine());
+
+                Dictionary<string, int> OutputDictionary = new Dictionary<string, int>();
+
+                for (int i = lower; i <= upper; i++)
+                {
+                    Number = GetSpelledNumber(i);
+                    if (Number.Contains('e'))
+                    {
+                        int cnt = 0;
+                        for (int j = 0; j < Number.Length; j++)
+                        {
+                            if (Number[j].Equals('e') || Number[j].Equals('E'))//'E' in case of  Eight
+                                cnt++;
+                        }
+                        OutputDictionary.Add(Number, cnt);
+                    }
+                    else
+                        OutputDictionary.Add(Number, 0);
+                }
+
+                Console.WriteLine(Environment.NewLine + "Output (Count of E or e in each number in the range):");
+
+                foreach (var pair in OutputDictionary)
+                    Console.WriteLine("({0}, {1})", pair.Key, pair.Value);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+         private static string GetSpelledNumber(int x)
+        {
+            Dictionary<int, string> PrivateDictionary = new Dictionary<int, string>();
+            try
+            {
+                PrivateDictionary.Add(1, "One");
+                PrivateDictionary.Add(2, "Two");
+                PrivateDictionary.Add(3, "Three");
+                PrivateDictionary.Add(4, "Four");
+                PrivateDictionary.Add(5, "Five");
+                PrivateDictionary.Add(6, "Six");
+                PrivateDictionary.Add(7, "Seven");
+                PrivateDictionary.Add(8, "Eight");
+                PrivateDictionary.Add(9, "Nine");
+                PrivateDictionary.Add(10, "Ten");
+                PrivateDictionary.Add(11, "Eleven");
+                PrivateDictionary.Add(12, "Twelve");
+                PrivateDictionary.Add(13, "Thirteen");
+                PrivateDictionary.Add(14, "Fourteen");
+                PrivateDictionary.Add(15, "Fifteen");
+                PrivateDictionary.Add(16, "Sixteen");
+                PrivateDictionary.Add(17, "Seventeen");
+                PrivateDictionary.Add(18, "Eighteen");
+                PrivateDictionary.Add(19, "Nineteen");
+                PrivateDictionary.Add(20, "Twenty");
+                PrivateDictionary.Add(30, "Thirty");
+                PrivateDictionary.Add(40, "Forty");
+                PrivateDictionary.Add(50, "Fifty");
+                PrivateDictionary.Add(60, "Sixty");
+                PrivateDictionary.Add(70, "Seventy");
+                PrivateDictionary.Add(80, "Eighty");
+                PrivateDictionary.Add(90, "Ninety");
+                PrivateDictionary.Add(0, string.Empty);
+
+                if (x >= 100)
+                    return GetSpelledNumber(x / 100) + " Hundred " + GetSpelledNumber(x % 100);//Example 423 = 42/100 = Four Hundred, (23/10 = 2*10 = 20) Twenty, 23%10 = 3, Four Hundred Twenty Three  
+                if (x >= 21)
+                    return PrivateDictionary[x / 10 * 10] + " " + PrivateDictionary[x % 10];
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return PrivateDictionary[x].ToString();
+        }
     }
-
-
     public class UserLog
     {
         public string username;
