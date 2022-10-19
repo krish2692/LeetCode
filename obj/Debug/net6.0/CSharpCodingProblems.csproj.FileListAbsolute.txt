@@ -13,3 +13,18 @@ D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\refint\CSharpCodingP
 D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.pdb
 D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.genruntimeconfig.cache
 D:\Important\Training\CSharpCodingProblems\obj\Debug\net6.0\ref\CSharpCodingProblems.dll
+D:\Important\Code Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.exe
+D:\Important\Code Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.deps.json
+D:\Important\Code Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.runtimeconfig.json
+D:\Important\Code Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.dll
+D:\Important\Code Training\CSharpCodingProblems\bin\Debug\net6.0\CSharpCodingProblems.pdb
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.csproj.AssemblyReference.cache
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.GeneratedMSBuildEditorConfig.editorconfig
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.AssemblyInfoInputs.cache
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.AssemblyInfo.cs
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.csproj.CoreCompileInputs.cache
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.dll
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\refint\CSharpCodingProblems.dll
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.pdb
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\CSharpCodingProblems.genruntimeconfig.cache
+D:\Important\Code Training\CSharpCodingProblems\obj\Debug\net6.0\ref\CSharpCodingProblems.dll

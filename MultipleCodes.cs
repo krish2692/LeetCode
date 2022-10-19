@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace LEETCODE // Note: actual namespace depends on the project name.
+namespace CSharpCodingProblems // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            /*TopPageSquenceCode();
+            TopPageSquenceCode();
 
-            Console.WriteLine("Indexing Summing to 4 in { 1, 1, 2, 1, 1, 2 } are:  {");
+            Console.WriteLine("Indexes Summing to 4 in { 1, 1, 2, 1, 1, 2 } are:  {");
             foreach (int i in TwoSumCode(new int[] { 1, 1, 2, 1, 1, 2 }, 4))
                 Console.Write(i + " ");
 
@@ -17,10 +17,13 @@ namespace LEETCODE // Note: actual namespace depends on the project name.
 
             //Amazon telephonic interview Question
             Console.WriteLine("Shuffled Playlist for Playlist:  {1,2,3,4,5,6,7,8,9} using :");
-            ShufflePlayList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 3);*/
+            ShufflePlayList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 3);
 
             DictionaryCountEinGivenRange();
-
+            
+           /* Console.WriteLine("Indexes Summing to 14 in { 5, 4, 1, 6, 2, 8 } are:  {");
+            foreach (int i in TwoSumCode(new int[] { 5, 4, 1, 6, 2, 8 }, 14))
+                Console.Write(i + " ");*/
 
 
         }

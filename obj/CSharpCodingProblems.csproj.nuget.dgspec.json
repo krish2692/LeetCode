@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Important\\Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj": {}
+    "D:\\Important\\Code Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj": {}
   },
   "projects": {
-    "D:\\Important\\Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj": {
+    "D:\\Important\\Code Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Important\\Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj",
+        "projectUniqueName": "D:\\Important\\Code Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj",
         "projectName": "CSharpCodingProblems",
-        "projectPath": "D:\\Important\\Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj",
+        "projectPath": "D:\\Important\\Code Training\\CSharpCodingProblems\\CSharpCodingProblems.csproj",
         "packagesPath": "C:\\Users\\krish\\.nuget\\packages\\",
-        "outputPath": "D:\\Important\\Training\\CSharpCodingProblems\\obj\\",
+        "outputPath": "D:\\Important\\Code Training\\CSharpCodingProblems\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
